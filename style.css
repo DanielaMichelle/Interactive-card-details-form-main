@@ -1,0 +1,363 @@
+:root {
+  --violet-1-prymary: hsl(249, 99%, 64%);
+  --violet-2-prymary: hsl(278, 94%, 30%);
+  --red-primary: hsl(0, 100%, 66%);
+  --white-neutral: hsl(0, 0%, 100%);
+  --light-grayish-violet-neutral: hsl(270, 3%, 87%);
+  --dark-grayish-violet-neutral: hsl(279, 6%, 55%);
+  --very-dark-violet-neutral: hsl(278, 68%, 11%);
+  --space-grtesk-font: "Space Grotesk", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: var(--space-grtesk-font);
+  font-weight: 500;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100vh;
+  width: 100%;
+}
+
+main .background {
+  grid-column-start: 1;
+  background-image: url(./images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+main .background-mobile {
+  display: none;
+}
+
+.form-section {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 10rem;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+
+.form-section label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin-top: 28px;
+}
+
+.form-section input {
+  padding: 12px;
+  border: 1px solid var(--light-grayish-violet-neutral);
+  border-radius: 10px;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.form-section input::placeholder {
+  color: var(--light-grayish-violet-neutral);
+  font-size: 15px;
+  font-family: var(--space-grtesk-font);
+  font-weight: 500;
+}
+
+.form-section input:focus {
+  border: 0.5px solid var(--very-dark-violet-neutral);
+  color: var(--very-dark-violet-neutral);
+  font-family: var(--space-grtesk-font);
+}
+
+.form-section input:not(:focus):not(:placeholder-shown) {
+  color: var(--very-dark-violet-neutral);
+  font-size: 15px;
+  font-family: var(--space-grtesk-font);
+  font-weight: 500;
+}
+
+/* Form errors */
+.form-section .error {
+  /*input*/
+  border-color: var(--red-primary);
+}
+
+.form-section .error-message {
+  /*sapn*/
+  display: none;
+  color: var(--red-primary);
+  font-size: 8px;
+  margin-top: 2px;
+}
+
+.form-section .form-date-cvc {
+  display: flex;
+  margin-top: 28px;
+}
+
+.form-section .form-date-cvc .form-MM-YY {
+  display: flex;
+}
+
+.form-section .form-date-cvc .form-MM-YY input {
+  width: 40%;
+  margin-right: 10px;
+}
+
+.form-section button {
+  padding: 12px;
+  border: none;
+  margin-top: 28px;
+  border-radius: 10px;
+  background-color: var(--very-dark-violet-neutral);
+  color: var(--white-neutral);
+  border: 1px solid var(--very-dark-violet-neutral);
+}
+
+main .cards-section--container {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.card-front .card-img {
+  position: relative;
+}
+
+.card-front .card-logo-img {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.card-front .card-front__number {
+  position: absolute;
+  left: 30px;
+  top: 55%;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: var(--white-neutral);
+}
+
+.card-front .card-front__name {
+  position: absolute;
+  color: var(--white-neutral);
+  top: 80%;
+  text-transform: uppercase;
+  left: 30px;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.card-front .card-front__date {
+  position: absolute;
+  color: var(--white-neutral);
+  top: 80%;
+  right: 20px;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.card-back {
+  position: absolute;
+  left: 7rem;
+  top: 16rem;
+}
+
+.card-back img {
+  position: relative;
+}
+
+.card-back span {
+  position: absolute;
+  color: var(--white-neutral);
+  letter-spacing: 3px;
+  font-size: 14px;
+  bottom: 123px;
+  right: 55px;
+}
+
+.thank-you-section {
+  width: 30rem;
+  margin: 0 auto;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10rem;
+}
+
+.thank-you-section span {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--very-dark-violet-neutral);
+  margin-top: 2rem;
+}
+
+.thank-you-section p {
+  color: var(--dark-grayish-violet-neutral);
+  margin-top: 12px;
+  margin-bottom: 1rem;
+}
+
+.thank-you-section button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  margin-top: 28px;
+  border-radius: 10px;
+  background-color: var(--very-dark-violet-neutral);
+  color: var(--white-neutral);
+  border: 1px solid var(--very-dark-violet-neutral);
+}
+
+@media (max-width: 1024px) {
+  .card-front {
+    position: absolute;
+    left: -40px;
+  }
+
+  .card-back {
+    left: -2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-front {
+    left: 90px;
+    z-index: 2;
+  }
+
+  .card-back {
+    z-index: 1;
+    top: -139px;
+    left: 8rem;
+  }
+
+  .form-section {
+    padding: 0;
+  }
+
+  .form-section form {
+    padding-top: 20rem;
+  }
+
+  .thank-you-section {
+    padding-left: 0;
+    padding-top: 20rem;
+    width: 360px;
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    display: block;
+  }
+  main .background {
+    display: none;
+  }
+
+  main .background-mobile {
+    display: block;
+  }
+
+  main .background-mobile img {
+    width: 100%;
+  }
+
+  .form-section form {
+    padding-top: 5rem;
+  }
+
+  .card-front {
+    width: 16rem;
+    height: 9rem;
+    left: -15px;
+    top: -25px;
+  }
+
+  .card-back {
+    width: 16rem;
+    height: 9rem;
+    top: -118px;
+    left: 4rem;
+  }
+
+  .card-front img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-back img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-front .card-logo-img {
+    width: 60px;
+    height: 35px;
+  }
+
+  .card-front .card-front__number {
+    font-size: 16px;
+  }
+
+  .card-front .card-front__name,
+  .card-front .card-front__date {
+    font-size: 10px;
+  }
+
+  .card-back span {
+    font-size: 10px;
+    bottom: 77px;
+    right: 35px;
+  }
+
+  .thank-you-section {
+    padding-top: 5rem;
+  }
+
+  .thank-you-section button,
+  .form-section button {
+    height: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-back {
+    left: 34px;
+  }
+
+  .card-front {
+    left: -24px;
+  }
+
+  .form-section {
+    padding: 0 14px;
+  }
+
+  .thank-you-section {
+    width: 314px;
+  }
+
+  .thank-you-section {
+    padding-top: 6rem;
+  }
+}
