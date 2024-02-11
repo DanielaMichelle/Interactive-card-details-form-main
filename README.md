@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/DanielaMichelle/News-Homepage-Main
-- Live Site URL: https://danielamichelle.github.io/News-Homepage-Main/
+- Solution URL: https://github.com/DanielaMichelle/Interactive-card-details-form-main
+- Live Site URL: https://danielamichelle.github.io/Interactive-card-details-form-main/
 
 ### Built with
 
